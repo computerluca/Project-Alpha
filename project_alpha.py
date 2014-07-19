@@ -35,7 +35,6 @@ while True :
 		
 		
 	url = api_url + urllib.urlencode({"q":city,"type":"like","units":measure_system,"APPID":api_key})
-	print url
 	request = urllib.urlopen(url)
 	data =  request.read()
 	
