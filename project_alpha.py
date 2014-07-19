@@ -12,7 +12,6 @@ while True :
 	city = raw_input("Enter city: ")
 	data_format = raw_input("Write 'c' for Celsius or 'f' for Fahrenheit: ")
 	data_format = data_format.lower()
-	print data_format
 	
 	# validate de user input
 	# TO_DO: improve validation ej. "only recieve alpha characters"
