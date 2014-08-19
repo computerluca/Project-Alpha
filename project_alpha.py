@@ -162,4 +162,4 @@ def weatherInformation(api_key) :
             
              
 
-weatherInformation(api_key) 
+weatherInformation(api_key)
