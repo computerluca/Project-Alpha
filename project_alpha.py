@@ -3,7 +3,7 @@ import json
 import datetime
 import os
 
-api_key = "71624f8764ebbaab515c7c8c71c3e0c1" # put your key here
+api_key = "" # put your key here
 
 def geoLocation(api_key,measure_system) :
 
