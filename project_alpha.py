@@ -113,6 +113,9 @@ def weatherInformation(api_key) :
                     if len(user_city_input) < 1 :
                         print "City:",user_city_input,"not valid. Please write other city"
                         continue
+                    elif not user_city_input.isalpha():
+			            print "You can input only characters"
+			            continue
                     else :
                         current_weather_city = currentWeather(api_key,measureSystem(measure_system_input),user_city_input)
                         if current_weather_city ["count"] == 1 :
