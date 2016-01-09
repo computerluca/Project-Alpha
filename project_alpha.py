@@ -70,7 +70,6 @@ def forecastWeather(api_key,measure_system) :
 def weatherInformation(api_key) :
     '''
     weatherInformation() is the main function.
-
     '''
     while True :
         os.system(clearScreenCommand())
@@ -106,16 +105,22 @@ def weatherInformation(api_key) :
             
             elif main_menu_input == "2" :
                 while True :
-                    user_city_input = raw_input("Enter city: ")
+                    user_city_input = str(raw_input("Enter city: Enter q to return to the menu "))
+	            
+		    
                     
                     # validate de user input
                     # TO_DO: improve validation ej. "only recieve alpha characters"
+
                     if len(user_city_input) < 1 :
                         print "City:",user_city_input,"not valid. Please write other city"
                         continue
-                    elif not user_city_input.isalpha():
-			            print "You can input only characters"
-			            continue
+		    elif not user_city_input.isalpha():
+			print "You can input only characters"
+			continue
+		    elif user_city_input =="q":
+
+        		break
                     else :
                         current_weather_city = currentWeather(api_key,measureSystem(measure_system_input),user_city_input)
                         if current_weather_city ["count"] == 1 :
